@@ -34,6 +34,13 @@ Almost no need to create custom CSS for this project
 - done, fire up your browser and browse to `http://localhost:3000`
 ### Development Notes
 
+### Deployment notes
+
+#### Heroku
+
+- [development QA branch](https://dev-personal-dashboard.herokuapp.com/)
+- [LIVE branch](https://live-personal-dashboard.herokuapp.com/)
+
 
 
 <!--* System dependencies-->
