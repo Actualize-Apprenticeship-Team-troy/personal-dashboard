@@ -28,6 +28,8 @@ Almost no need to create custom CSS for this project
 ### Setup guide
 - clone the repo
 - `bundle install`
+- `rails db:create`
+- `rails db:migrate`
 - `rails s`
 - done, fire up your browser and browse to `http://localhost:3000`
 ### Development Notes
