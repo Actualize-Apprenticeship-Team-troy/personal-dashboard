@@ -20,10 +20,13 @@ clone from github
 
 ### Development Notes
 
-We are using W3Schools schools for all CSS. This will have 99% of what you will need.
-Almost no need to create custom CSS for this project
+We are using W3Schools schools for all CSS. This will have 80% of what you will need.
+Almost no need to create custom CSS for this project.
 
-[Check it out](https://www.w3schools.com/w3css/w3css_intro.asp)
+[W3 theme resource](https://www.w3schools.com/w3css/default.asp) - for general colors
+
+[W3 Boot resource](https://www.w3schools.com/bootstrap/bootstrap_get_started.asp) - for cool functionality
+
 
 ### Setup guide
 - clone the repo
