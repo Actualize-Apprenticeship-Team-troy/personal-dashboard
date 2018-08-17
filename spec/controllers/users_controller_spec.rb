@@ -38,6 +38,19 @@ RSpec.describe UsersController, type: :controller do
         expect(users.length).to eq(0)
         expect(subject.request.flash[:warning]).to eq('Form is invalid')
       end
+      it "negative result, username not long enough" do
+        params = { user: {
+          username: 'us',
+          email: 'email@test.com',
+          password: 'password'
+        } }
+
+        get :create, params: params
+        users = User.all
+        puts users
+        expect(users.length).to eq(0)
+        expect(subject.request.flash[:warning]).to eq('Form is invalid')
     end
   end
 end
+end 
