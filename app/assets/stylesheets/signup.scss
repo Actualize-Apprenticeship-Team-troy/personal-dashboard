@@ -47,6 +47,7 @@ button:hover {
 .cancelbtn, .signupbtn {
   float: left;
   width: 100%;
+  @extend button;
 }
 
 /* Add padding to container elements */

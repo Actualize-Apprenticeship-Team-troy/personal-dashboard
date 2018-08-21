@@ -1,42 +1,26 @@
 <%= form_for @user do |f| %>
-  <%= f.label :username %>:
-  <%= f.text_field :username %><br />
 
-  <%= f.label :email %>:
-  <%= f.text_field :email %><br />
-
-  <%= f.label :password %>:
-  <%= f.text_field :password %><br />
-
-  <%= f.label :password_confirmation %>:
-  <%= f.text_field :password_confirmation %><br />
-
-  <%= f.submit %>
-<% end %>
-<br>
-<hr>
-
-<form action="" style="border:1px solid #ccc">
   <div class="container">
     <h1>Sign Up</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
-    <label for="Username">Username:</label>
-    <input type="text" placeholder="Enter Username" name="username" required>
 
-    <label for="email">Email:</label>
-    <input type="text" placeholder="Enter Email" name="email" required>
+      <%= f.label :username %>:
+      <%= f.text_field :username, placeholder: "Enter Username" %><br />
 
-    <label for="psw">Password:</label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
+      <%= f.label :email %>:
+      <%= f.text_field :email, placeholder: "Enter Email" %><br />
 
-    <label for="psw-repeat">Password Confirmation:</label>
-    <input type="password" placeholder="Password Confirmation" name="psw-repeat" required>
-    
+      <%= f.label :password %>:
+      <%= f.text_field :password, placeholder: "Enter Password" %><br />
 
-    <div class="clearfix">
-      <!-- <button type="button" class="cancelbtn">Cancel</button> -->
-      <button type="submit" class="signupbtn">Sign Up</button>
-    </div>
+      <%= f.label :password_confirmation %>:
+      <%= f.text_field :password_confirmation, placeholder: "Password Confirmation" %><br />
+
+      <div class="clearfix">
+        <%= f.submit 'Sign Up', :class => "signupbtn" %>
+      </div>
   </div>
-</form>
+
+<% end %>
+
