@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'users/new'
+  resources :users
 
-  get 'users/create'
+  # get 'users/new'
+
+  # get 'users/create'
 
   root 'home#index'
 
