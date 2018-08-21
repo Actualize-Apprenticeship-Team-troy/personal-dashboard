@@ -20,6 +20,7 @@ RSpec.describe UsersController, type: :controller do
 
         get :create, params: params
         users = User.all
+        binding.pry
         expect(users.length).to eq(1)
         expect(subject.request.flash[:success]).to eq('Successfully signed up')
         expect(response).to redirect_to( root_path )
