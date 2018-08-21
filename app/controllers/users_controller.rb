@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def new
-    @testing = "This is a test"
+    @user = User.new
   end
 
   def create
