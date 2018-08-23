@@ -1,0 +1,26 @@
+<%= form_for @user do |f| %>
+
+  <div class="container">
+    <h1>Sign Up</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+
+      <%= f.label :username %>:
+      <%= f.text_field :username, placeholder: "Enter Username" %><br />
+
+      <%= f.label :email %>:
+      <%= f.text_field :email, placeholder: "Enter Email" %><br />
+
+      <%= f.label :password %>:
+      <%= f.text_field :password, placeholder: "Enter Password" %><br />
+
+      <%= f.label :password_confirmation %>:
+      <%= f.text_field :password_confirmation, placeholder: "Password Confirmation" %><br />
+
+      <div class="clearfix">
+        <%= f.submit 'Sign Up', :class => "signupbtn" %>
+      </div>
+  </div>
+
+<% end %>
+
