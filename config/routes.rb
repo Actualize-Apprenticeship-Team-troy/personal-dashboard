@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   # get 'users/create'
 
-  root 'home#index'
+  get '/home', to: 'home#index', as: :home
+
+  root 'users#new'
 
 end

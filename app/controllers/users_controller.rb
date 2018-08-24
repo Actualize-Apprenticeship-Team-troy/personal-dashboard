@@ -7,7 +7,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       flash[:success] = "Successfully signed up"
-      redirect_to '/'
+      redirect_to (home_path)
     else
       flash[:warning] = 'Form is invalid'
       render :new
