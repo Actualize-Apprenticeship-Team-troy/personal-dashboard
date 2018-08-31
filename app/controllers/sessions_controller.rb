@@ -1,6 +1,8 @@
 class SessionsController < ApplicationController
+  skip_before_action :require_valid_user!, except: [:destroy]
+
   def new
-    @session = Session.new
+   # @session = Session.new
   end
 
   def create
