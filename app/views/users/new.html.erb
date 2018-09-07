@@ -3,6 +3,12 @@
   <div class="container">
     <h1>Sign Up</h1>
     <p>Please fill in this form to create an account.</p>
+    <p>Already have an account?
+    
+        <%= link_to 'Click here to sign in.', login_path, :class => "btn btn-primary" %>
+      
+      </p>
+    
     <hr>
 
       <%= f.label :username %>:

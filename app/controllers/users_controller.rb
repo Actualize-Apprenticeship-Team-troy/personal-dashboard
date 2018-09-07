@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  skip_before_action :require_valid_user!
+
   def new
     @user = User.new
   end
@@ -10,7 +12,7 @@ class UsersController < ApplicationController
       redirect_to (home_path)
     else
       flash[:warning] = 'Form is invalid'
-      render :new
+      redirect_to root_path
     end
   end
 

@@ -1,0 +1,27 @@
+<%= form_for(:session, :url => {:controller => "sessions", :action => "create"}) do |f| %>
+
+  <div class="container">
+    <h1>Authentication Required</h1>
+    <p>Please log in to continue.</p>
+    
+    <p>New User?
+    
+      <%= link_to 'Click here to create an account.', root_path, :class => "btn btn-primary" %>  
+    </p>
+    
+    <hr>
+
+      <%= f.label :email %>:
+      <%= f.text_field :email, placeholder: "Email" %><br />
+
+      <%= f.label :password %>:
+      <%= f.text_field :password, placeholder: "Enter Password" %><br />
+
+      <div class="clearfix">
+        <%= f.submit 'Log In', :class => "btn btn-primary"%>
+      </div>
+  </div>
+
+
+<% end %>
+
