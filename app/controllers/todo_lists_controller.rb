@@ -1,27 +1,27 @@
 class TodoListsController < ApplicationController
   def index
-    @todo_lists = Todo_List.all
+    @todo_lists = TodoList.all
   end
 
   def show
     id = todo_list.id
-    @todo_list = Todo_List.find_by(:id)
+    @todo_list = TodoList.find_by(:id)
   end
 
   def create
-    @todo_list = Todo_List.new(todo_list_params)
+    @todo_list = TodoList.new(todo_list_params)
     @todo_list.save
   end
 
   def update
     id = todo_list.id
-    @todo_list = Todo_List.find_by(:id)
+    @todo_list = TodoList.find_by(:id)
     @todo_list.update(todo_list_params)
   end
 
   def destroy
     id = todo_list.id
-    @todo_list = Todo_List.find_by(:id)
+    @todo_list = TodoList.find_by(:id)
     @todo_list.destroy
   end
 
