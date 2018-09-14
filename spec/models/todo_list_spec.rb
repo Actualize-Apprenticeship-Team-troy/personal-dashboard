@@ -1,6 +1,14 @@
 require 'rails_helper'
 
 RSpec.describe TodoList, type: :model do
+  describe "#INDEX" do
+    it "respond successfully" do
+      get :index 
+      expect(response).to be_success
+    end
+  end
+
+
   describe "Create Todo List" do
     describe "creates a todo list" do
       it "positive result" do

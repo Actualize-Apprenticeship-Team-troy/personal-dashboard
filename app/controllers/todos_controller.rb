@@ -1,11 +1,10 @@
-class TodoListsController < ApplicationController
+class TodosController < ApplicationController
   def index
     @todo_lists = TodoList.all
   end
 
   def show
-    id = todo_list.id
-    @todo_list = TodoList.find_by(:id)
+    @todo_list = TodoList.find_by(id: params[:id])
   end
 
   def create
