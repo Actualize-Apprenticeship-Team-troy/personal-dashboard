@@ -9,13 +9,24 @@ class TodosController < ApplicationController
 
   def create
     @todo_list = TodoList.new(todo_list_params)
-    @todo_list.save
+    if @todo_list.save
+      flash[:success] = "List was created successfully"
+      redirect_to (home_path)
+    else
+      flash[:warning] = "List was not created successfully"
+      render :new
+    end
   end
 
   def update
-    id = todo_list.id
-    @todo_list = TodoList.find_by(:id)
-    @todo_list.update(todo_list_params)
+    @todo_list = TodoList.find_by_id(params[:id])
+   if  @todo_list.update(todo_list_params)
+      flash[:success] = "List was updated successfully"
+      redirect_to (home_path)
+    else
+      flash[:warning] = "List was not updated successfully"
+      redirect_to (home_path)
+    end
   end
 
   def destroy
