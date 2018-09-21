@@ -82,8 +82,13 @@ GEM
       factory_bot (~> 4.10.0)
       railties (>= 3.0.0)
     ffi (1.9.25)
+    figaro (1.1.1)
+      thor (~> 0.14)
+    geocoder (1.4.4)
     globalid (0.4.1)
       activesupport (>= 4.2.0)
+    httparty (0.16.2)
+      multi_xml (>= 0.5.2)
     i18n (1.1.0)
       concurrent-ruby (~> 1.0)
     jbuilder (2.7.0)
@@ -105,6 +110,7 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.3)
     multi_json (1.13.1)
+    multi_xml (0.6.0)
     nio4r (2.3.1)
     nokogiri (1.8.4)
       mini_portile2 (~> 2.3.0)
@@ -228,6 +234,9 @@ DEPENDENCIES
   database_cleaner
   factory_bot_rails
   faker!
+  figaro
+  geocoder
+  httparty
   jbuilder (~> 2.5)
   launchy
   listen (>= 3.0.5, < 3.2)
